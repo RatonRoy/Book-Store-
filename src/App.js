@@ -1,23 +1,26 @@
 // import logo from './logo.svg';
 import { Route, Routes } from 'react-router-dom';
-import About from './About/About';
+import About from './components/About/About';
 import './App.css';
-import Blogs from './Blogs/Blogs';
-import DashBoard from './DashBoard/DashBoard';
-import Header from './Header/Header';
-import Home from './Home/Home';
-import Reviews from './Reviews/Reviews';
+import Blogs from './components/Blogs/Blogs';
+import DashBoard from './components/DashBoard/DashBoard';
+import Home from './components/Home/Home';
+import Reviews from './components/Reviews/Reviews';
+import Header from './components/Header/Header';
+import NoRouting from './components/NoRouting/NoRouting'
 
 function App() {
   return (
     <div className="">
       <Header></Header>
+      <Home></Home>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route> 
         <Route path='/reviews' element={<Reviews></Reviews>}></Route> 
         <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/about' element = {<About></About>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='*' element={<NoRouting></NoRouting>}></Route>
       </Routes>
     </div>
   );
