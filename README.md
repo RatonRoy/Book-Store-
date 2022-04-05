@@ -1,3 +1,3 @@
 ## Book Store Website 
-“*” Create a home pages 
-"*" Create a reviews component 
+* Create a home pages 
+* Create a reviews component 
