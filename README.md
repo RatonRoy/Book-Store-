@@ -4,3 +4,4 @@
 * create dash board component 
 * create a blog component 
 * Add some responsiveness  
+* Edit the title 
