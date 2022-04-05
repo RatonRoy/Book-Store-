@@ -1,2 +1,3 @@
 ## Book Store Website 
--- Item one 
+“*” Create a home pages 
+"*" Create a reviews component 
