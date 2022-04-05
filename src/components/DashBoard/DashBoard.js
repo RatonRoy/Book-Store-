@@ -1,58 +1,75 @@
 import React from 'react';
 // import { Line, LineChart } from 'rechart';
-import { Line, LineChart, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 import './DashBoard.css';
+
 const DashBoard = () => {
 	const data = [
 		{
-		  name: 'Page A',
-		  price: 4000,
-		  pv: 2400,
-		  amt: 2400,
+			"month": "Mar",
+			"investment": 100000,
+			"sell": 241,
+			"revenue": 10401
 		},
 		{
-		  name: 'Page B',
-		  price: 3000,
-		  pv: 1398,
-		  amt: 2210,
+			"month": "Apr",
+			"investment": 200000,
+			"sell": 423,
+			"revenue": 24500
 		},
 		{
-		  name: 'Page C',
-		  price: 2000,
-		  pv: 9800,
-		  amt: 2290,
+			"month": "May",
+			"investment": 500000,
+			"sell": 726,
+			"revenue": 67010
 		},
 		{
-		  name: 'Page D',
-		  price: 2780,
-		  pv: 3908,
-		  amt: 2000,
+			"month": "Jun",
+			"investment": 500000,
+			"sell": 529,
+			"revenue": 40405
 		},
 		{
-		  name: 'Page E',
-		  price: 1890,
-		  pv: 4800,
-		  amt: 2181,
+			"month": "Jul",
+			"investment": 600000,
+			"sell": 601,
+			"revenue": 50900
 		},
 		{
-		  name: 'Page F',
-		  price: 2390,
-		  pv: 3800,
-		  amt: 2500,
-		},
-		{
-		  name: 'Page G',
-		  price: 3490,
-		  pv: 4300,
-		  amt: 2100,
-		},
-	  ];
+			"month": "Aug",
+			"investment": 700000,
+			"sell": 670,
+			"revenue": 61000
+		}
+	];
 	return (
-		<LineChart  width={1000} height={400} data={data}>
-          <Line type="monotone" dataKey="price" stroke="black"></Line> 
-        <XAxis dataKey={'name'} stroke='red' ></XAxis> 
-        <YAxis dataKey={'price'} stroke = 'red' />
-      </LineChart>
+		<div className="dash-container">
+			<h2 className="dash-title"> Dash Board of book selling </h2>
+			<div className="dash-wrapper">
+				<div className="single-dash">
+					<h3 className="bash-subtitle"> Monthly selling </h3>
+					<LineChart width={500} height={400} data={data}>
+						<Line type="monotone" dataKey="sell" stroke="red"></Line>
+						<XAxis dataKey={'month'} stroke='black' ></XAxis>
+						<YAxis dataKey={'sell'} stroke='black' />
+						<Tooltip stroke='white'></Tooltip>
+					</LineChart>
+				</div>
+				<div className="single-dash">
+					<h3 className="bash-subtitle"> Monthly investments </h3>
+					<BarChart width={500} height={400} data={data}>
+						<CartesianGrid strokeDasharray="2 3" />
+						<XAxis dataKey="month"/>
+						<YAxis dataKey="investment"/>
+						<Tooltip className = 'tooltip'/>
+						{/* <Legend /> */}
+						<Bar dataKey="investment" fill="#8884d8" />
+						<Bar dataKey="month" fill="White" />
+					</BarChart>
+				</div>
+
+			</div>
+		</div>
 	);
 };
 

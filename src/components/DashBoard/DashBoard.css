@@ -1,0 +1,32 @@
+.dash-container{
+	width: 85vw;
+	margin: 0 auto; 
+	padding: 2rem 1rem;
+}
+.dash-title{
+	text-align: center;
+	letter-spacing: 0.13rem;
+	text-transform: capitalize;
+	color: maroon;
+	font-size: 2rem;
+}
+.dash-wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.single-dash{
+	padding: 2rem 1rem;
+}
+.bash-subtitle{
+	margin-bottom: 2rem;
+	text-align: center; 
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+	font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+	.dash-wrapper{
+		display: block;
+	}
+}
