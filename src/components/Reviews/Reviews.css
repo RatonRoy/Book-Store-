@@ -1,0 +1,52 @@
+.review-container{
+	width: 85vw;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+.title-review{
+	text-transform: uppercase;
+	color: maroon;
+	letter-spacing: 0.2rem; 
+	text-align: center; 
+	margin-bottom: 2rem;
+}
+.review-wrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.single-review{
+	width: 30%;
+	height: 300px;
+	background-color: rgb(116, 141, 141);
+	border-radius: 1rem;
+	align-items: center; 
+	padding-top: 2rem;
+	padding: 2rem 1rem;
+}
+.name{
+	text-align: center;
+	color:brown;
+	margin-bottom: 1rem;
+}
+.review-text{
+	text-align: justify;
+	color: white; 
+	line-height: 1.2;
+	font-size: 1rem;
+
+}
+.btn-wrapper{
+	display: flex;
+	justify-content: center;
+}
+.btn-review{
+	background-color: maroon;
+	color: white;
+	padding: 1rem 3rem; 
+	text-decoration: none;
+	border-radius: 0.5rem; 
+	font-size: 1.3rem;
+	letter-spacing: 0.1rem; 
+	margin-top: 3rem;	
+}
